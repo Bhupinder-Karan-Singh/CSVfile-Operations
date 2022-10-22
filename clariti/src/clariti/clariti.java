@@ -58,7 +58,6 @@ public class clariti {
   		double subtotal = 0;
   		int  total = 0;
   		double sum = 0;
-  		int flag = 0;
   			Scanner inputStream = new Scanner(file);
   			while(inputStream.hasNext()) {
   				String data = inputStream.nextLine();
