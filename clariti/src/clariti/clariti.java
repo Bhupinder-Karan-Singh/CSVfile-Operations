@@ -54,10 +54,9 @@ public class clariti {
   		String filename = "csvfile/raw_fees.csv";
   		File file =  new File(filename);
   		
-  		double fees = 0;
-  		double subtotal = 0;
-  		int  total = 0;
-  		double sum = 0;
+  		double total_price = 0;
+  		double sum_total_price = 0;
+  		
   			Scanner inputStream = new Scanner(file);
   			while(inputStream.hasNext()) {
   				String data = inputStream.nextLine();
@@ -66,13 +65,13 @@ public class clariti {
   					values[5].equalsIgnoreCase(subCategory) && values[6].equalsIgnoreCase(type)) {
   					
   				    double quantity = Double.parseDouble(values[7]);
-  					double price = Double.parseDouble(values[8]);
-  					fees = quantity * price;
+  					double unit_price = Double.parseDouble(values[8]);
+  					total_price = quantity * unit_price;
   				} 
-  			   sum += fees;
+  				sum_total_price += total_price;
   			}
-  			subtotal = sum + (getSurcharge(department) * sum);
-  			total = (int)(subtotal);
+  			double subtotal = sum_total_price + (getSurcharge(department) * sum_total_price);
+  			int total = (int)(subtotal);
   			System.out.println("The total "+type+" fees for "+subCategory+" subcategory within the "+category+" "
   					+ "Category of the "+department+" department is : "+total);
   			inputStream.close();
