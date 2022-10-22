@@ -49,6 +49,7 @@ public class clariti {
   		return surcharge;
       }
       
+      // calculating fees
       public int calculate_fee(String department, String category, String subCategory, String type) throws Exception{
   		
   		String filename = "csvfile/raw_fees.csv";
@@ -78,7 +79,7 @@ public class clariti {
   			return total;
   	    }
 	 
-      // main method
+     // main method
      public static void main(String[] args) throws Exception {
   		clariti obj = new clariti();
 		obj.getInputs();
