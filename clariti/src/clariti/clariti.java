@@ -57,22 +57,28 @@ public class clariti {
   		
   		double total_price = 0;
   		double sum_total_price = 0;
+  		int total  = 0;
   		
   			Scanner inputStream = new Scanner(file);
   			while(inputStream.hasNext()) {
   				String data = inputStream.nextLine();
   				String[] values = data.split(",");
-  				if(values[3].equalsIgnoreCase(department) && values[4].equalsIgnoreCase(category) &&
-  					values[5].equalsIgnoreCase(subCategory) && values[6].equalsIgnoreCase(type)) {
-  					
+  				if(values[3].equalsIgnoreCase(department) && (values[4].equalsIgnoreCase(category) || category == "") &&
+  					(values[5].equalsIgnoreCase(subCategory) || subCategory == "") && 
+  					(values[6].equalsIgnoreCase(type) || type== "")) {
   				    double quantity = Double.parseDouble(values[7]);
   					double unit_price = Double.parseDouble(values[8]);
   					total_price = quantity * unit_price;
   					sum_total_price += total_price;
-  				} 
+  				}
   			}
-  			double subtotal = sum_total_price + (getSurcharge(department) * sum_total_price);
-  			int total = (int)(subtotal);
+  			if( (department.equalsIgnoreCase("Development")) || (department.equalsIgnoreCase("Marketing")) || (department.equalsIgnoreCase("Sales"))) {
+  				double subtotal = sum_total_price + (getSurcharge(department) * sum_total_price);
+  				total = (int)(subtotal);
+  			} else {
+  				double subtotal = sum_total_price - (getSurcharge(department) * sum_total_price);
+  				total = (int)(subtotal);
+  			}
   			System.out.println("The total "+type+" fees for "+subCategory+" subcategory within the "+category+" "
   					+ "Category of the "+department+" department is : "+total);
   			inputStream.close();

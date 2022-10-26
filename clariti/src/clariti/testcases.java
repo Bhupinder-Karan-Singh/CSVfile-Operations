@@ -10,8 +10,8 @@ class testcases {
 	@Test
 	void test_fee() throws Exception {
 		clariti obj = new clariti();
-		assertEquals(34295, obj.calculate_fee("development", "coding", "cat3", "typec"));	
-		assertEquals(27880, obj.calculate_fee("sales", "sales engineering", "cat2", "typec"));	
+		assertEquals(110212, obj.calculate_fee("development", "quality assurance", "cat1", ""));
+		assertEquals(229041, obj.calculate_fee("operations", "human resources", "", ""));
 	}
 	
 	// test case to find the correct surcharge
