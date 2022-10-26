@@ -68,8 +68,8 @@ public class clariti {
   				    double quantity = Double.parseDouble(values[7]);
   					double unit_price = Double.parseDouble(values[8]);
   					total_price = quantity * unit_price;
+  					sum_total_price += total_price;
   				} 
-  				sum_total_price += total_price;
   			}
   			double subtotal = sum_total_price + (getSurcharge(department) * sum_total_price);
   			int total = (int)(subtotal);
