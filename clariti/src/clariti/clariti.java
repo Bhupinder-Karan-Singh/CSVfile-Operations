@@ -11,6 +11,10 @@ public class clariti {
     	  
     	  Scanner sc= new Scanner(System.in);   
   		  String var;//System.in is a standard input stream 
+<<<<<<< HEAD
+=======
+
+>>>>>>> karan
   		  
   		  do {
   			System.out.print("Enter Department : ");  
