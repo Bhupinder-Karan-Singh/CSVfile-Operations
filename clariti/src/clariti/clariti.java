@@ -10,7 +10,6 @@ public class clariti {
       public void getInputs() throws Exception {
     	  
     	  Scanner sc= new Scanner(System.in);   
-<<<<<<< HEAD
   		  String var;//System.in is a standard input stream karan 
 
   		  
