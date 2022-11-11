@@ -10,7 +10,7 @@ public class clariti {
       public void getInputs() throws Exception {
     	  
     	  Scanner sc= new Scanner(System.in);   
-  		  String var;//System.in is a standard input stream karan 
+  		  String var;//System.in is a standard input stream 
 
   		  
   		  do {
