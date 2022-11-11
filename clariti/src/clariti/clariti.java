@@ -11,7 +11,7 @@ public class clariti {
     	  
     	  Scanner sc= new Scanner(System.in);   
 
-  		  String var;//System.in is a standard input stream bhupinder singh karan
+  		  String var;//System.in is a standard input stream bhupinder singh 
   		  
   		  do {
   			System.out.print("Enter Department : ");  
