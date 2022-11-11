@@ -10,7 +10,7 @@ public class clariti {
       public void getInputs() throws Exception {
     	  
     	  Scanner sc= new Scanner(System.in);   
-  		  String var;//System.in is a standard input stream  
+  		  String var;//System.in is a standard input stream bhupinder 
   		  
   		  do {
   			System.out.print("Enter Department : ");  
