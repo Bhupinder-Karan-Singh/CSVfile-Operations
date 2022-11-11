@@ -10,7 +10,7 @@ class testcases {
 	@Test
 	void test_fee() throws Exception {
 		clariti obj = new clariti();
-		assertEquals(110212, obj.calculate_fee("engg", "quality assurance", "cat1", ""));
+		assertEquals(110212, obj.calculate_fee("sales", "quality assurance", "cat1", ""));
 		assertEquals(229041, obj.calculate_fee("operations", "human resources", "", ""));
 	}
 	
